@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PiezoGen - Piezoelectric Energy Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body class="min-h-screen bg-background text-foreground">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur">
+      <div
+        class="container mx-auto flex h-16 items-center justify-between px-4"
+      >
+        <div class="flex items-center space-x-2">
+          <i class="bi bi-lightning-charge text-3xl text-primary"></i>
+          <span class="text-xl font-semibold">PiezoGen</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#home" class="transition-colors hover:text-primary">Home</a>
+          <a href="#products" class="transition-colors hover:text-primary"
+            >Products</a
+          >
+          <a href="#technology" class="transition-colors hover:text-primary"
+            >Technology</a
+          >
+          <a href="#about" class="transition-colors hover:text-primary"
+            >About</a
+          >
+          <a href="#contact" class="transition-colors hover:text-primary"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <button
+            id="cart-button"
+            class="relative inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
+          >
+            <i class="bi bi-cart mr-2"></i>
+            Cart
+            <span
+              id="cart-count"
+              class="hidden absolute -top-2 -right-2 h-5 w-5 rounded-full bg-red-500 text-xs text-white flex items-center justify-center"
+              >0</span
+            >
+          </button>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100"
+          >
+            <i class="bi bi-list text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="mobile-menu md:hidden border-t">
+        <nav class="container mx-auto flex flex-col space-y-2 px-4 py-4">
+          <a
+            href="#home"
+            class="block py-2 transition-colors hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="#products"
+            class="block py-2 transition-colors hover:text-primary"
+            >Products</a
+          >
+          <a
+            href="#technology"
+            class="block py-2 transition-colors hover:text-primary"
+            >Technology</a
+          >
+          <a
+            href="#about"
+            class="block py-2 transition-colors hover:text-primary"
+            >About</a
+          >
+          <a
+            href="#contact"
+            class="block py-2 transition-colors hover:text-primary"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="relative overflow-hidden bg-gradient-to-r from-white to-gray-50"
+      >
+        <div class="container mx-auto px-4 py-20">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 fade-in">
+              <div class="space-y-4">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+                  Power Every <span class="text-primary">Step</span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-lg">
+                  Revolutionary piezoelectric technology that converts human
+                  footsteps into clean, renewable electricity. Transform
+                  high-traffic areas into sustainable energy sources.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-6">
+                <div class="flex items-center space-x-2">
+                  <i class="bi bi-lightning-charge text-primary"></i>
+                  <span class="text-sm">Clean Energy</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <!-- <i class="bi bi-speedometer2 text-primary"></i> -->
+                   <span>👣</span>
+                  <span class="text-sm">Step-Powered</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <!-- <i class="bi bi-leaf text-primary"></i> -->
+                  <!-- <i class="bi bi-leaf text-primary"></i> -->
+                   <span>🍃</span>
+                  <span class="text-sm">Eco-Friendly</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button
+                  class="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-medium text-white shadow hover:bg-primary/90 transition-colors"
+                >
+                  Shop Products
+                  <i class="bi bi-arrow-right ml-2"></i>
+                </button>
+                <button
+                  class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-8 py-3 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
+                >
+                  Learn Technology
+                </button>
+              </div>
+            </div>
+
+            <div class="relative fade-in">
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1735584496549-7532b6f3afdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZW5ld2FibGUlMjBlbmVyZ3klMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc1NjIyOTAzOXww&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Renewable Energy Technology"
+                  class="w-full h-[400px] object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
+                ></div>
+              </div>
+
+              <!-- Floating stats -->
+              <div
+                class="absolute -bottom-6 left-6 right-6 grid grid-cols-3 gap-4"
+              >
+                <div
+                  class="bg-white border rounded-lg p-4 text-center shadow-lg"
+                >
+                  <div class="text-2xl font-bold text-primary">0.50W</div>
+                  <div class="text-xs text-gray-600">Per Step</div>
+                </div>
+                <div
+                  class="bg-white border rounded-lg p-4 text-center shadow-lg"
+                >
+                  <div class="text-2xl font-bold text-primary">24/7</div>
+                  <div class="text-xs text-gray-600">Operation</div>
+                </div>
+                <div
+                  class="bg-white border rounded-lg p-4 text-center shadow-lg"
+                >
+                  <div class="text-2xl font-bold text-primary">Zero</div>
+                  <div class="text-xs text-gray-600">Emissions</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              Our Piezoelectric Products
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover our complete range of piezoelectric generators designed
+              for every application, from home use to large commercial
+              installations.
+            </p>
+          </div>
+
+          <!-- Category Tabs -->
+          <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button
+              class="category-tab active px-4 py-2 rounded-md text-sm font-medium transition-all"
+              data-category="all"
+            >
+              All Products
+              <span class="ml-1 bg-gray-200 text-xs px-2 py-1 rounded-full"
+                >6</span
+              >
+            </button>
+            <button
+              class="category-tab px-4 py-2 rounded-md text-sm font-medium transition-all"
+              data-category="commercial"
+            >
+              Commercial
+              <span class="ml-1 bg-gray-200 text-xs px-2 py-1 rounded-full"
+                >2</span
+              >
+            </button>
+            <button
+              class="category-tab px-4 py-2 rounded-md text-sm font-medium transition-all"
+              data-category="residential"
+            >
+              Residential
+              <span class="ml-1 bg-gray-200 text-xs px-2 py-1 rounded-full"
+                >1</span
+              >
+            </button>
+            <button
+              class="category-tab px-4 py-2 rounded-md text-sm font-medium transition-all"
+              data-category="industrial"
+            >
+              Industrial
+              <span class="ml-1 bg-gray-200 text-xs px-2 py-1 rounded-full"
+                >1</span
+              >
+            </button>
+            <button
+              class="category-tab px-4 py-2 rounded-md text-sm font-medium transition-all"
+              data-category="educational"
+            >
+              Educational
+              <span class="ml-1 bg-gray-200 text-xs px-2 py-1 rounded-full"
+                >1</span
+              >
+            </button>
+            <button
+              class="category-tab px-4 py-2 rounded-md text-sm font-medium transition-all"
+              data-category="accessories"
+            >
+              Accessories
+              <span class="ml-1 bg-gray-200 text-xs px-2 py-1 rounded-full"
+                >1</span
+              >
+            </button>
+          </div>
+
+          <!-- Products Grid -->
+          <div
+            id="products-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- Products will be dynamically generated by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology Section -->
+      <section id="technology" class="py-20">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              How Piezoelectric Technology Works
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our innovative piezoelectric generators harness the power of human
+              movement, converting every step into clean, renewable electricity
+              through advanced crystal technology.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1562447208-3d5f81e66179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxlbGVjdHJpYyUyMGNpcmN1aXRzJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NTYyMjkwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Piezoelectric Technology"
+                class="w-full h-[400px] object-cover rounded-2xl"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-2xl"
+              ></div>
+            </div>
+
+            <div class="space-y-6">
+              <h3 class="text-2xl font-bold">The Science Behind Every Step</h3>
+              <p class="text-gray-600">
+                Piezoelectric crystals generate electrical charge when subjected
+                to mechanical stress. Our patented floor tiles contain
+                high-efficiency piezoelectric materials that capture the kinetic
+                energy from footsteps and convert it into usable electricity.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-primary/5 p-4 rounded-lg">
+                  <h4 class="font-semibold mb-2">Efficiency Rate</h4>
+                  <p class="text-2xl font-bold text-primary">85%</p>
+                </div>
+                <div class="bg-primary/5 p-4 rounded-lg">
+                  <h4 class="font-semibold mb-2">Lifespan</h4>
+                  <p class="text-2xl font-bold text-primary">20+ Years</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-lg border p-6 text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <!-- <i class="bi bi-footprint text-primary text-xl"></i> -->
+                <!-- <i class="bi bi-footprint text-primary text-xl"></i> -->
+                 <span>🗜️</span>
+              </div>
+              <h3 class="font-semibold mb-2">Pressure Activation</h3>
+              <p class="text-sm text-gray-600">
+                Every footstep applies mechanical pressure to the piezoelectric
+                crystals, creating electrical charge.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-lg border p-6 text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="bi bi-lightning-charge text-primary text-xl"></i>
+              </div>
+              <h3 class="font-semibold mb-2">Energy Conversion</h3>
+              <p class="text-sm text-gray-600">
+                Piezoelectric materials convert mechanical stress directly into
+                electrical energy with high efficiency.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-lg border p-6 text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="bi bi-battery text-primary text-xl"></i>
+              </div>
+              <h3 class="font-semibold mb-2">Energy Storage</h3>
+              <p class="text-sm text-gray-600">
+                Generated electricity is stored in high-capacity batteries or
+                fed directly into the power grid.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-lg border p-6 text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="bi bi-speedometer2 text-primary text-xl"></i>
+              </div>
+              <h3 class="font-semibold mb-2">Smart Monitoring</h3>
+              <p class="text-sm text-gray-600">
+                Real-time monitoring tracks energy generation, usage patterns,
+                and system performance.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="mt-16 bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8"
+          >
+            <div class="text-center space-y-4">
+              <h3 class="text-2xl font-bold">Environmental Impact</h3>
+              <p class="text-gray-600 max-w-2xl mx-auto">
+                Each of our piezoelectric generators can power LED lighting,
+                charge devices, or contribute to the electrical grid, reducing
+                carbon footprint and promoting sustainable energy.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-primary mb-2">500kg</div>
+                  <div class="text-sm text-gray-600">CO₂ Saved Annually</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-primary mb-2">2.5kWh</div>
+                  <div class="text-sm text-gray-600">
+                    Daily Energy Generation
+                  </div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-primary mb-2">1000+</div>
+                  <div class="text-sm text-gray-600">
+                    Steps to Power LED 1 Hour
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">About PiezoGen</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              We're pioneering the future of sustainable energy through
+              innovative piezoelectric technology, making clean energy
+              generation accessible to everyone, one step at a time.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16"
+          >
+            <div class="space-y-6">
+              <h3 class="text-2xl font-bold">Our Mission</h3>
+              <p class="text-gray-600">
+                Founded in 2025, 30<sup>th</sup> August by a team of engineers and environmental
+                scientists, PiezoGen was born from the vision of harnessing
+                human kinetic energy to create a more sustainable world. We
+                believe that every step counts toward a cleaner future.
+              </p>
+              <p class="text-gray-600">
+                Our cutting-edge piezoelectric generators are designed to
+                seamlessly integrate into existing infrastructure, providing
+                clean energy solutions for residential, commercial, and
+                industrial applications without compromising on aesthetics or
+                functionality.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4 mt-8">
+                <div>
+                  <h4 class="font-semibold mb-2">Innovation</h4>
+                  <p class="text-sm text-gray-600">
+                    Continuous R&D in piezoelectric materials and energy
+                    harvesting technology.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-2">Sustainability</h4>
+                  <p class="text-sm text-gray-600">
+                    Committed to reducing carbon footprint through renewable
+                    energy solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1709450245503-4f903ffea3ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxncmVlbiUyMHRlY2hub2xvZ3klMjBpbm5vdmF0aW9ufGVufDF8fHx8MTc1NjIyOTA0MHww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Green Technology Innovation"
+                class="w-full h-[400px] object-cover rounded-2xl"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-lg border p-6 text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="bi bi-people text-primary text-xl"></i>
+              </div>
+              <div class="text-2xl font-bold mb-1">10,000+</div>
+              <div class="text-sm text-gray-600">Happy Customers</div>
+            </div>
+
+            <div class="bg-white rounded-lg border p-6 text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="bi bi-globe text-primary text-xl"></i>
+              </div>
+              <div class="text-2xl font-bold mb-1">25+</div>
+              <!-- <div class="text-sm text-gray-600">Countries Served</div> -->
+              <div class="text-sm text-gray-600">Serving Countries</div>
+            </div>
+
+            <div class="bg-white rounded-lg border p-6 text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="bi bi-award text-primary text-xl"></i>
+              </div>
+              <div class="text-2xl font-bold mb-1">15</div>
+              <div class="text-sm text-gray-600">Patents Filed</div>
+            </div>
+
+            <div class="bg-white rounded-lg border p-6 text-center">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="bi bi-lightbulb text-primary text-xl"></i>
+              </div>
+              <div class="text-2xl font-bold mb-1">50+</div>
+              <div class="text-sm text-gray-600">R&D Projects</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Ready to power your space with piezoelectric technology? Contact
+              us for custom solutions, technical support, or partnership
+              opportunities.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="space-y-6">
+              <h3 class="text-2xl font-bold">Contact Information</h3>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg border p-6">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="bi bi-envelope text-primary"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">Email</h4>
+                      <p class="text-sm text-gray-600">pandeyaman5410@gmail.com</p>
+                      <p class="text-sm text-gray-600">sales@piezogen.com</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg border p-6">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="bi bi-telephone text-primary"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">Phone</h4>
+                      <!-- <p class="text-sm text-gray-600">+1 (555) 123-4567</p>
+                      <p class="text-sm text-gray-600">+1 (555) 987-6543</p> -->
+                      <p class="text-sm text-gray-600">+91 955 565 5410</p>
+                      <p class="text-sm text-gray-600">+91 993 662 5410</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg border p-6">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="bi bi-geo-alt text-primary"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">Address</h4>
+                      <p class="text-sm text-gray-600">Andheri West </p>
+                      <p class="text-sm text-gray-600">Tech City, TC 400078</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg border p-6">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center"
+                    >
+                      <i class="bi bi-clock text-primary"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">Business Hours</h4>
+                      <p class="text-sm text-gray-600">
+                        Mon - Fri: 9:00 AM - 6:00 PM
+                      </p>
+                      <p class="text-sm text-gray-600">
+                        Sat: 10:00 AM - 4:00 PM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-primary/5 rounded-lg border p-6">
+                <h4 class="font-semibold mb-2">Need a Custom Solution?</h4>
+                <p class="text-gray-600 mb-4">
+                  Our engineering team can design custom piezoelectric systems
+                  tailored to your specific requirements and installation
+                  environment.
+                </p>
+                <button
+                  class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
+                >
+                  Schedule Consultation
+                </button>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg border p-6">
+              <h3 class="text-xl font-semibold mb-6">Send us a Message</h3>
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      for="firstName"
+                      class="block text-sm font-medium mb-2"
+                      >First Name</label
+                    >
+                    <input
+                      id="firstName"
+                      type="text"
+                      placeholder="John"
+                      required
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  <div>
+                    <label for="lastName" class="block text-sm font-medium mb-2"
+                      >Last Name</label
+                    >
+                    <input
+                      id="lastName"
+                      type="text"
+                      placeholder="Doe"
+                      required
+                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="john@example.com"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+
+                <div>
+                  <label for="company" class="block text-sm font-medium mb-2"
+                    >Company (Optional)</label
+                  >
+                  <input
+                    id="company"
+                    type="text"
+                    placeholder="Your Company"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-sm font-medium mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    id="subject"
+                    type="text"
+                    placeholder="How can we help you?"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    placeholder="Tell us about your project or requirements..."
+                    rows="5"
+                    required
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-primary/90 transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-2">
+              <i class="bi bi-lightning-charge text-3xl text-primary"></i>
+              <span class="text-xl font-semibold">PiezoGen</span>
+            </div>
+            <p class="text-sm text-gray-600">
+              Pioneering sustainable energy through innovative piezoelectric
+              technology. Every step counts toward a cleaner future.
+            </p>
+            <div class="flex space-x-4">
+              <button class="text-gray-400 hover:text-primary">
+                <a href="https://www.facebook.com/itzamann" target="_blank"><i class="bi bi-facebook text-xl"></i></a>
+              </button>
+              <button class="text-gray-400 hover:text-primary">
+                <a href="https://www.x.com/@amann_here" target="_blank"><i class="bi bi-twitter text-xl"></i></a>
+              </button>
+              <button class="text-gray-400 hover:text-primary">
+                <a href="https://www.instagram.com/py.amann" target="_blank"><i class="bi bi-instagram text-xl"></i></a>
+              </button>
+              <button class="text-gray-400 hover:text-primary">
+                <a href="https://www.linkedin.com/in/aman-pandey-97a609267/" target="_blank"><i class="bi bi-linkedin text-xl"></i></a>
+              </button>
+            </div>
+          </div>
+
+          <!-- Products -->
+          <div class="space-y-4">
+            <h3 class="font-semibold">Products</h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Commercial Systems</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Residential Solutions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Industrial Generators</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Educational Kits</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Smart Controllers</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="space-y-4">
+            <h3 class="font-semibold">Support</h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Documentation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Installation Guide</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Technical Support</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Warranty</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors">FAQ</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="space-y-4">
+            <h3 class="font-semibold">Newsletter</h3>
+            <p class="text-sm text-gray-600">
+              Stay updated with the latest in piezoelectric technology and
+              sustainable energy.
+            </p>
+            <form id="newsletter-form" class="space-y-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <button
+                type="submit"
+                class="w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-primary/90 transition-colors"
+              >
+                <i class="bi bi-envelope mr-2"></i>
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <hr class="my-8 border-gray-200" />
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+        >
+          <div class="text-sm text-gray-600">
+            © 2024 PiezoGen. All rights reserved.
+          </div>
+          <div class="flex space-x-6 text-sm text-gray-600">
+            <a href="#" class="hover:text-primary transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-primary transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-primary transition-colors"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div
+      id="cart-sidebar"
+      class="cart-sidebar fixed top-0 right-0 h-full w-full sm:max-w-lg bg-white shadow-2xl z-50"
+    >
+      <div class="flex flex-col h-full">
+        <div class="border-b p-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold flex items-center">
+              <i class="bi bi-cart mr-2"></i>
+              Shopping Cart (<span id="cart-items-count">0</span>)
+            </h2>
+            <button id="close-cart" class="text-gray-400 hover:text-gray-600">
+              <i class="bi bi-x-lg text-xl"></i>
+            </button>
+          </div>
+          <p class="text-sm text-gray-600 mt-1">
+            Review and manage your selected piezoelectric products before
+            checkout.
+          </p>
+        </div>
+
+        <div id="cart-content" class="flex-1 overflow-auto p-4">
+          <div
+            id="empty-cart"
+            class="flex flex-col items-center justify-center h-full text-center space-y-4"
+          >
+            <i class="bi bi-cart text-6xl text-gray-400"></i>
+            <div>
+              <h3 class="font-semibold mb-2">Your cart is empty</h3>
+              <p class="text-sm text-gray-600">
+                Add some piezoelectric products to get started!
+              </p>
+            </div>
+          </div>
+
+          <div id="cart-items" class="space-y-4 hidden">
+            <!-- Cart items will be dynamically generated -->
+          </div>
+        </div>
+
+        <div id="cart-footer" class="hidden border-t p-4 space-y-4">
+          <div class="flex justify-between items-center">
+            <span class="font-semibold">Total:</span>
+            <span id="cart-total" class="text-lg font-bold">$0.00</span>
+          </div>
+
+          <button
+            id="checkout-btn"
+            class="w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-3 text-sm font-medium text-white shadow hover:bg-primary/90 transition-colors"
+          >
+            Proceed to Checkout
+          </button>
+
+          <button
+            id="continue-shopping"
+            class="w-full inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
+          >
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <script>
+      // Product Data
+      const products = [
+        {
+          id: "1",
+          name: "PiezoFloor Pro Max",
+          price: 299,
+          originalPrice: 399,
+          image:
+            "https://images.unsplash.com/photo-1695191388218-f6259600223f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxmbG9vciUyMHRpbGVzJTIwbW9kZXJufGVufDF8fHx8MTc1NjIyOTE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+          rating: 5,
+          reviews: 128,
+          description:
+            "High-efficiency piezoelectric floor tile for commercial spaces. Generates up to 50W per step.",
+          features: [
+            "50W output",
+            "Waterproof",
+            "Anti-slip surface",
+            "10-year warranty",
+          ],
+          inStock: true,
+          category: "commercial",
+        },
+        {
+          id: "2",
+          name: "PiezoStep Home Edition",
+          price: 149,
+          originalPrice: 199,
+          image:
+            "https://images.unsplash.com/photo-1655300256335-beef51a914fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNzb2xhciUyMHBhbmVscyUyMGVuZXJneXxlbnwxfHx8fDE3NTYxNTgyMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          rating: 4,
+          reviews: 89,
+          description:
+            "Compact piezoelectric generator perfect for residential use. Easy installation.",
+          features: [
+            "25W output",
+            "Easy install",
+            "LED indicators",
+            "5-year warranty",
+          ],
+          inStock: true,
+          category: "residential",
+        },
+        {
+          id: "3",
+          name: "PiezoModule Industrial",
+          price: 599,
+          originalPrice: null,
+          image:
+            "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxlbGVjdHJvbmljJTIwY29tcG9uZW50c3xlbnwxfHx8fDE3NTYyMjkxNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          rating: 5,
+          reviews: 45,
+          description:
+            "Heavy-duty industrial piezoelectric system for factories and warehouses.",
+          features: [
+            "100W output",
+            "Industrial grade",
+            "Remote monitoring",
+            "15-year warranty",
+          ],
+          inStock: true,
+          category: "industrial",
+        },
+        {
+          id: "4",
+          name: "PiezoSmart Controller",
+          price: 99,
+          originalPrice: null,
+          image:
+            "https://images.unsplash.com/photo-1752955471067-294a5de5bf48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxzbWFydCUyMGhvbWUlMjBkZXZpY2V8ZW58MXx8fHwxNzU2MTkxNzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          rating: 4,
+          reviews: 67,
+          description:
+            "Smart controller with app integration for monitoring energy generation.",
+          features: [
+            "App control",
+            "Real-time data",
+            "Energy tracking",
+            "2-year warranty",
+          ],
+          inStock: false,
+          category: "accessories",
+        },
+        {
+          id: "5",
+          name: "PiezoWalk Public Spaces",
+          price: 799,
+          originalPrice: 999,
+          image:
+            "https://images.unsplash.com/photo-1709450245503-4f903ffea3ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxncmVlbiUyMHRlY2hub2xvZ3klMjBpbm5vdmF0aW9ufGVufDF8fHx8MTc1NjIyOTA0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+          rating: 5,
+          reviews: 23,
+          description:
+            "Large-scale piezoelectric system for sidewalks, malls, and public areas.",
+          features: [
+            "200W output",
+            "Weather resistant",
+            "Modular design",
+            "20-year warranty",
+          ],
+          inStock: true,
+          category: "commercial",
+        },
+        {
+          id: "6",
+          name: "PiezoMini Prototype Kit",
+          price: 49,
+          originalPrice: null,
+          image:
+            "https://images.unsplash.com/photo-1562447208-3d5f81e66179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxlbGVjdHJpYyUyMGNpcmN1aXRzJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NTYyMjkwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          rating: 4,
+          reviews: 156,
+          description:
+            "Educational kit for students and researchers to learn piezoelectric principles.",
+          features: [
+            "Learning kit",
+            "Documentation",
+            "Sample code",
+            "1-year warranty",
+          ],
+          inStock: true,
+          category: "educational",
+        },
+      ];
+
+      // Cart functionality
+      let cart = [];
+      let selectedCategory = "all";
+
+      // DOM Elements
+      const cartButton = document.getElementById("cart-button");
+      const cartSidebar = document.getElementById("cart-sidebar");
+      const cartOverlay = document.getElementById("cart-overlay");
+      const closeCart = document.getElementById("close-cart");
+      const cartCount = document.getElementById("cart-count");
+      const cartItemsCount = document.getElementById("cart-items-count");
+      const cartContent = document.getElementById("cart-content");
+      const cartItems = document.getElementById("cart-items");
+      const emptyCart = document.getElementById("empty-cart");
+      const cartFooter = document.getElementById("cart-footer");
+      const cartTotal = document.getElementById("cart-total");
+      const productsGrid = document.getElementById("products-grid");
+      const categoryTabs = document.querySelectorAll(".category-tab");
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      // Utility Functions
+      function showToast(message, type = "success") {
+        const toast = document.createElement("div");
+        toast.className = `toast ${
+          type === "success"
+            ? "bg-green-100 border-green-500 text-green-700"
+            : "bg-red-100 border-red-500 text-red-700"
+        }`;
+        toast.innerHTML = `
+                <div class="flex items-center">
+                    <i class="bi bi-check-circle mr-2"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+
+        document.getElementById("toast-container").appendChild(toast);
+
+        setTimeout(() => {
+          toast.classList.add("show");
+        }, 100);
+
+        setTimeout(() => {
+          toast.classList.remove("show");
+          setTimeout(() => {
+            toast.remove();
+          }, 300);
+        }, 3000);
+      }
+
+      function generateStars(rating) {
+        let stars = "";
+        for (let i = 1; i <= 5; i++) {
+          if (i <= rating) {
+            stars += '<i class="bi bi-star-fill text-yellow-400"></i>';
+          } else {
+            stars += '<i class="bi bi-star text-gray-300"></i>';
+          }
+        }
+        return stars;
+      }
+
+      function calculateDiscount(originalPrice, currentPrice) {
+        if (!originalPrice) return 0;
+        return Math.round(
+          ((originalPrice - currentPrice) / originalPrice) * 100
+        );
+      }
+
+      // Product Functions
+      function renderProducts(productsToRender = products) {
+        productsGrid.innerHTML = "";
+
+        productsToRender.forEach((product) => {
+          const discount = calculateDiscount(
+            product.originalPrice,
+            product.price
+          );
+
+          const productCard = document.createElement("div");
+          productCard.className =
+            "product-card bg-white rounded-lg border overflow-hidden hover:shadow-lg transition-all duration-300";
+          productCard.innerHTML = `
+                    <div class="relative">
+                        <img src="${product.image}" alt="${
+            product.name
+          }" class="w-full h-48 object-cover">
+                        ${
+                          discount > 0
+                            ? `<span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-${discount}%</span>`
+                            : ""
+                        }
+                        ${
+                          !product.inStock
+                            ? '<div class="absolute inset-0 bg-black/50 flex items-center justify-center"><span class="bg-gray-600 text-white text-sm px-3 py-1 rounded">Out of Stock</span></div>'
+                            : ""
+                        }
+                    </div>
+                    <div class="p-4 space-y-3">
+                        <div>
+                            <h3 class="font-semibold line-clamp-2">${
+                              product.name
+                            }</h3>
+                            <p class="text-sm text-gray-600 mt-1 line-clamp-2">${
+                              product.description
+                            }</p>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <div class="flex">
+                                ${generateStars(product.rating)}
+                            </div>  
+                            <span class="text-sm text-gray-500">(${
+                              product.reviews
+                            })</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-lg font-bold">$${
+                              product.price
+                            }</span>
+                            ${
+                              product.originalPrice
+                                ? `<span class="text-sm text-gray-500 line-through">$${product.originalPrice}</span>`
+                                : ""
+                            }
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <button onclick="addToCart('${product.id}')" ${
+            !product.inStock ? "disabled" : ""
+          } 
+                                class="w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-primary/90 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed">
+                            <i class="bi bi-cart-plus mr-2"></i>
+                            ${product.inStock ? "Add to Cart" : "Out of Stock"}
+                        </button>
+                    </div>
+                `;
+
+          productsGrid.appendChild(productCard);
+        });
+      }
+
+      function filterProducts(category) {
+        selectedCategory = category;
+        const filteredProducts =
+          category === "all"
+            ? products
+            : products.filter((product) => product.category === category);
+
+        renderProducts(filteredProducts);
+
+        // Update active tab
+        categoryTabs.forEach((tab) => {
+          tab.classList.remove("active");
+          if (tab.dataset.category === category) {
+            tab.classList.add("active");
+          }
+        });
+      }
+
+      // Cart Functions
+      function addToCart(productId) {
+        const product = products.find((p) => p.id === productId);
+        if (!product || !product.inStock) return;
+
+        const existingItem = cart.find((item) => item.id === productId);
+
+        if (existingItem) {
+          existingItem.quantity += 1;
+          showToast(`Increased ${product.name} quantity`);
+        } else {
+          cart.push({ ...product, quantity: 1 });
+          showToast(`${product.name} added to cart`);
+        }
+
+        updateCartUI();
+      }
+
+      function removeFromCart(productId) {
+        const item = cart.find((item) => item.id === productId);
+        if (item) {
+          showToast(`${item.name} removed from cart`);
+          cart = cart.filter((item) => item.id !== productId);
+          updateCartUI();
+        }
+      }
+
+      function updateQuantity(productId, quantity) {
+        if (quantity === 0) {
+          removeFromCart(productId);
+          return;
+        }
+
+        const item = cart.find((item) => item.id === productId);
+        if (item) {
+          item.quantity = quantity;
+          updateCartUI();
+        }
+      }
+
+      function updateCartUI() {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const total = cart.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0
+        );
+
+        // Update cart count
+        cartCount.textContent = totalItems;
+        cartItemsCount.textContent = totalItems;
+        cartTotal.textContent = `$${total.toFixed(2)}`;
+
+        if (totalItems > 0) {
+          cartCount.classList.remove("hidden");
+        } else {
+          cartCount.classList.add("hidden");
+        }
+
+        // Update cart content
+        if (cart.length === 0) {
+          emptyCart.classList.remove("hidden");
+          cartItems.classList.add("hidden");
+          cartFooter.classList.add("hidden");
+        } else {
+          emptyCart.classList.add("hidden");
+          cartItems.classList.remove("hidden");
+          cartFooter.classList.remove("hidden");
+
+          cartItems.innerHTML = cart
+            .map(
+              (item) => `
+                    <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg border">
+                        <img src="${item.image}" alt="${
+                item.name
+              }" class="w-16 h-16 object-cover rounded-md">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-semibold text-sm line-clamp-2">${
+                              item.name
+                            }</h4>
+                            <p class="text-sm text-gray-600">$${item.price}</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="updateQuantity('${item.id}', ${
+                item.quantity - 1
+              })" 
+                                    class="w-8 h-8 rounded border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                            <span class="w-8 text-center text-sm font-medium">${
+                              item.quantity
+                            }</span>
+                            <button onclick="updateQuantity('${item.id}', ${
+                item.quantity + 1
+              })" 
+                                    class="w-8 h-8 rounded border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                            <button onclick="removeFromCart('${item.id}')" 
+                                    class="w-8 h-8 rounded text-red-500 hover:bg-red-50 flex items-center justify-center">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `
+            )
+            .join("");
+        }
+      }
+
+      function openCart() {
+        cartSidebar.classList.add("open");
+        cartOverlay.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeCartSidebar() {
+        cartSidebar.classList.remove("open");
+        cartOverlay.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      // Event Listeners
+      cartButton.addEventListener("click", openCart);
+      closeCart.addEventListener("click", closeCartSidebar);
+      cartOverlay.addEventListener("click", closeCartSidebar);
+
+      document
+        .getElementById("continue-shopping")
+        .addEventListener("click", closeCartSidebar);
+
+      document.getElementById("checkout-btn").addEventListener("click", () => {
+        alert(
+          "Checkout functionality would be implemented here with payment processing!"
+        );
+      });
+
+      // Category tabs
+      categoryTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          filterProducts(tab.dataset.category);
+        });
+      });
+
+      // Mobile menu
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
+
+      // Form submissions
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          showToast(
+            "Thank you for your message! We will get back to you soon."
+          );
+          e.target.reset();
+        });
+
+      document
+        .getElementById("newsletter-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          showToast("Thank you for subscribing to our newsletter!");
+          e.target.reset();
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            // Close mobile menu if open
+            mobileMenu.classList.remove("open");
+          }
+        });
+      });
+
+      // Initialize the page
+      renderProducts();
+      updateCartUI();
+
+      // Fade in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+          }
+        });
+      }, observerOptions);
+
+      // Observe sections for fade-in animation
+      document.querySelectorAll("section").forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
